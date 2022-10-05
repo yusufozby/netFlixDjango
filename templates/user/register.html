@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <form action="" enctype="multipart/form-data" method="POST" class="w-50 m-auto border mt-5 text-light p-3">
+        {% csrf_token %}
+        <label for="">Kullanıcı adı</label>
+        <input type="text" name="username" class="form-control" id="">
+        <label for="">Email</label>
+        <input type="email" name="email" class="form-control" id="">
+        <label for="">Profil Resmi</label>
+        <input type="file" name="resim" id="" class="form-control">
+        <label for="">Tel</label>
+        <input type="tel" name="tel" class="form-control" id="">
+        
+        <label for="">Şifre</label>
+        
+        <input type="password" name="password1" class="form-control" id="">
+        <label for="">Şifre Onay</label>
+        <input type="password" name="password2" class="form-control" id="">
+        <input type="submit" value="Kayıt ol" class="btn btn-primary mt-2">
+    </form>
+</div>
+{% endblock content %}
